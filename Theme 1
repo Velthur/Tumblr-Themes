@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+    <!-- Theme by Velthur | velthur.tumblr.com | Please leave this comment intact. -->
+    <!-- Content background image created by Simon Fletcher and I do not claim to own it. | wakecodesleep.com-->
+    <head>
+        <title>{Title}</title>
+        <link rel="icon" type="image/ico" href="{text:Favicon URL}"/>
+        
+                            <!-- META -->
+        <meta name="color:Background Colour" content="#d3e6e1" />
+        <meta name="color:Header Colour" content="#7fbcba" />
+        <meta name="color:Link Colour" content="#7fbcba" />
+        <meta name="text:Twitter Username" content="" />
+        <meta name="text:Youtube Username" content="" />
+        <meta name="text:Favicon URL" content="http://assets.tumblr.com/images/default_avatar_128.png" />
+    
+                            <!-- CSS -->
+        <style type="text/css">
+        
+        a:link, a:active, a:visited {
+            color:{color:Link Colour};
+            text-decoration:none;
+            }
+            
+        body {
+            background: {color:Background Colour};
+            }
+        
+        ol, ul, li {
+            list-style: none;
+            }
+            
+        h1 {
+            color: {color:Header Colour};
+            font-family: Trajan Pro, Georgia, Times New Roman;
+            text-align: center;
+            text-decoration: none;
+            padding: 3px;
+            }
+            
+        h2 {
+            color: {color:Header Colour};
+            text-align: center;
+            padding: 3px;
+            font-size: 95%;
+            }
+            
+        hr {
+            width:100px;
+            }
+            
+        div.CONTENT {
+        			background: url('http://static.tumblr.com/msonfaf/jnzl5o8hs/container.png') top left repeat-y;
+                    border-radius: 10px;
+                    height:100%;
+					width: 683px;
+					margin: auto;
+					padding: 0px 0 0 0;
+			}
+               
+        div.SPACING {
+                    padding: 5px 25px 5px 25px;
+            }
+            
+            {CustomCSS}
+        </style>
+    </head>
+    
+                            <!-- BODY -->
+        <body>
+            <div class="CONTENT">
+                <div class="SPACING">
+        <br />
+                    <center>
+                        <img src="{PortraitURL-96}" style="border-radius:100px;"></img>
+                    </center>
+                        <h1>{Title}</h1>
+                                <h2>{Description}</h2>
+                                    <center>
+                                        {block:IfTwitterUsername}<a href="http://www.twitter.com/{text:Twitter Username}">Twitter</a>{/block:IfTwitterUsername}
+                                        {block:IfYoutubeUsername}<a href="http://www.youtube.com/user/{text:Youtube Username}">Youtube</a>{/block:IfYoutubeUsername}
+                                        <br>
+                                        <br>
+                                        <br>
+                                        <hr>
+                                        <br>
+                                        <br>
+                                            {block:Posts}
+                {block:Text}
+                    <li class="post text">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        {Body}
+                    </li>
+                    {block:RebloggedFrom} Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Text}
+                
+                                            {block:Photo}
+                    <li class="post photo">
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                    {block:RebloggedFrom}Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Photo}
+                
+                                            {block:Panorama}
+                    <li class="post panorama">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                    {block:RebloggedFrom}Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Panorama}
+
+                {block:Photoset}
+                    <li class="post photoset">
+                        {Photoset-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                    {block:RebloggedFrom}Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Photoset}
+
+                {block:Quote}
+                    <li class="post quote">
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+                    {block:RebloggedFrom}Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Quote}
+
+                {block:Link}
+                    <li class="post link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+                    {block:RebloggedFrom}Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Link}
+
+                {block:Chat}
+                    <li class="post chat">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+                    {block:RebloggedFrom}Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Chat}
+
+                {block:Video}
+                    <li class="post video">
+                        {Video-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                    {block:RebloggedFrom} Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Video}
+
+                {block:Audio}
+                    <li class="post audio">
+                        {AudioPlayerBlack}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+                    {block:RebloggedFrom} Reblogged from: <a href="{ReblogParentName}">{ReblogParentName}</a>{/block:RebloggedFrom}
+                    <br>
+                    <br>
+                    {LikeButton}{ReblogButton}
+                    <hr>
+                    <br>
+                    <br>
+                {/block:Audio}
+            {/block:Posts}
+        </ol>
+        <br>
+        <br>
+        {block:Pagination}
+            {block:PreviousPage}
+                <a href="{PreviousPage}">Previous</a>
+            {/block:PreviousPage}
+<br>
+            {block:JumpPagination length="5"}
+                {block:CurrentPage}
+                    <span class="current_page">{PageNumber}</span>
+                {/block:CurrentPage}
+
+                {block:JumpPage}
+                    <a class="jump_page" href="{URL}">{PageNumber}</a>
+                {/block:JumpPage}
+            {/block:JumpPagination}
+<b>
+            {block:NextPage}
+                <a href="{NextPage}">Next</a>
+            {/block:NextPage}
+        {/block:Pagination}
+            </div>
+        </div><br />
+        <center>
+        <a href="http://www.velthur.tumblr.com">Theme made by: Velthur</a>
