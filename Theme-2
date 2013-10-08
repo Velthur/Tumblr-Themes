@@ -10,16 +10,17 @@
   
   <meta name="color:Background Colour" content="" />
   <meta name="color:Heading Colour" content="" />
+  <meta name="color:Link Hover Colour" content="" />
                                 
-  <meta name="text:Link 1" content="" />
+  <meta name="text:Link 1 URL" content="" />
   <meta name="text:Link 1 Title" content="" />
-  <meta name="text:Link 2" content="" />
+  <meta name="text:Link 2 URL" content="" />
   <meta name="text:Link 2 Title" content="" />
-  <meta name="text:Link 3" content="" />
+  <meta name="text:Link 3 URL" content="" />
   <meta name="text:Link 3 Title" content="" />
-  <meta name="text:Link 4" content="" />
+  <meta name="text:Link 4 URL" content="" />
   <meta name="text:Link 4 Title" content="" />
-  <meta name="text:Link 5" content="" />
+  <meta name="text:Link 5 URL" content="" />
   <meta name="text:Link 5 Title" content="" />
   
                                   <!-- STYLE -->
@@ -37,3 +38,7 @@
 
     a:link, a:active, a:visited {
       color: {color:Link Colour};
+      }
+      
+    a:hover {
+      color: {color:Link Hover Colour};
