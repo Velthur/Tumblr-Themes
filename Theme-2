@@ -34,3 +34,6 @@
       color: {color:Heading Colour};
       text-size: 100%;
       }
+
+    a:link, a:active, a:visited {
+      color: {color:Link Colour};
