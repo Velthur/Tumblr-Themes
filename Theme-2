@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+                                  <!-- Theme by Corey Chambers | velthur.tumblr.com -->
+                                  
+<head>
+                                  <!-- REQUIRED -->
+                                  
+  <title>{Title}</title>
+  
+                                  <!-- META -->
+  
+  <meta name="color:Background Colour" content="" />
+  <meta name="color:Heading Colour" content="" />
+                                
+  <meta name="text:Link 1" content="" />
+  <meta name="text:Link 1 Title" content="" />
+  <meta name="text:Link 2" content="" />
+  <meta name="text:Link 2 Title" content="" />
+  <meta name="text:Link 3" content="" />
+  <meta name="text:Link 3 Title" content="" />
+  <meta name="text:Link 4" content="" />
+  <meta name="text:Link 4 Title" content="" />
+  <meta name="text:Link 5" content="" />
+  <meta name="text:Link 5 Title" content="" />
+  
+                                  <!-- STYLE -->
+                                
+  <style>
+  
+    body {
+      color: {color:Background Colour};
+      }
+  
+    h1 {
+      color: {color:Heading Colour};
+      text-size: 100%;
+      }
