@@ -86,7 +86,7 @@
         <div class="HEADER">
             <div class="SPACING">
                 <center>
-                    <img src="{PortraitURL-96}" style="border-radius:100px;">
+                    <a href="/"><img src="{PortraitURL-96}" style="border-radius:100px;"></a>
                     <h1>{Title}</h1>
                     {Description}
 <br />
