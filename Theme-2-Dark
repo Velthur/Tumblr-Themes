@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html>
+
+<!-- Theme by Velthur | velthur.tumblr.com -->
+
+<head>
+
+<title>{Title}</title>
+
+<link rel="shortcut icon" href="{Favicon}">
+
+<meta name="color:Link Colour" content="" />
+<meta name="color:Header Colour" content="" />
+<meta name="text:Twitter URL" content="" />
+<meta name="text:Facebook URL" content="" />
+<meta name="text:YouTube URL" content="" />
+<meta name="text:Link One URL" content="" />
+<meta name="text:Link One Title" content="" />
+<meta name="text:Link Two URL" content="" />
+<meta name="text:Link Two Title" content="" />
+<meta name="text:Link Three URL" content="" />
+<meta name="text:Link Three Title" content="" />
+
+<style>
+
+a:link, a:visited, a:active {
+    text-decoration: none;
+    color: {color:Link Colour};
+    font-size: 125%;
+}
+
+body {
+    background: url('http://static.tumblr.com/ycb8sp7/l60mvpvin/content-bg.jpg');
+}
+
+div.spacing {
+    padding: 75px 0 0 10px
+}
+
+div.sidebar {
+    background: url('http://static.tumblr.com/ycb8sp7/FJ2mvpwnb/content-bg-white.jpg');
+    margin: auto;
+    height: 500px;
+    width: 250px;
+    float:left;
+    position:float;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+div.content {
+    background: url('http://static.tumblr.com/ycb8sp7/FJ2mvpwnb/content-bg-white.jpg');
+    border-radius: 5px;
+    width: 1000px;
+    float: right;
+    padding: 10px 
+}
+
+h1 {
+    font-family: Trajan Pro, Georgia, Times New Roman;
+    color: {color:Header Colour};
+    font-size: 150%;
+}
+
+hr {
+    width: 95%;
+}
+
+ol, ul, li {
+    list-style: none;
+}
+
+{CustomCSS}
+
+</style>
+
+<body>
+
+<div class="spacing">
+
+<!-- Begin SIDEBAR -->
+
+<div class="sidebar">
+    <center>
+        <img src="{PortraitURL-96}" style="border-radius: 100px;"></img>
+            <h1>{Title}</h1>
+            {Description}
+<br />
+<br />
+        <a href="{text:Link One URL}"><hr />{text:Link One Title}<hr /></a>
+        <a href="{text:Link Two URL}">{text:Link Two Title}<hr /></a>
+        <a href="{text:Link Three URL}">{text:Link Three Title}<hr /></a>
+<br />
+<br />
+<br />
+
+        <a href="{text:Facebook URL}"><img src="http://static.tumblr.com/ycb8sp7/9zrmvvhme/44px-facebook_icon.png"></img></a>
+        <a href="{text:Twitter URL}"><img src="http://static.tumblr.com/ycb8sp7/Zrfmvvhq0/44px-twitter_icon.png"></img></a>
+        <a href="{text:Youtube URL}"><img src="http://static.tumblr.com/ycb8sp7/R0imvvhug/44px-youtube_icon.png"></img></a>
+    </center>
+</div>
+
+<!-- Begin CONTENT -->
+
+<div class="content">
+     <ol id="posts">
+            {block:Posts}
+                {block:Text}
+                    <li class="post text">
+                        {block:Title}
+                            <center><h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        {Body}
+                    </center></li>
+<br />
+<hr />
+<br />
+                {/block:Text}
+                
+                {block:Photo}
+                    <li class="post photo">
+                        <img src="{PhotoURL-500}" alt="{PhotoAlt}"/>
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+<br />
+<hr />
+<br />
+                {/block:Photo}
+                
+                {block:Panorama}
+                    <li class="post panorama">
+                        {LinkOpenTag}
+                            <img src="{PhotoURL-Panorama}" alt="{PhotoAlt}"/>
+                        {LinkCloseTag}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+<br />
+<hr />
+<br />
+                {/block:Panorama}
+                
+                {block:Photoset}
+                    <li class="post photoset">
+                        {Photoset-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+<br />
+<hr />
+<br />
+                {/block:Photoset}
+
+                {block:Quote}
+                    <li class="post quote">
+                        "{Quote}"
+
+                        {block:Source}
+                            <div class="source">{Source}</div>
+                        {/block:Source}
+                    </li>
+<br />
+<hr />
+<br />
+                {/block:Quote}
+
+                {block:Link}
+                    <li class="post link">
+                        <a href="{URL}" class="link" {Target}>{Name}</a>
+
+                        {block:Description}
+                            <div class="description">{Description}</div>
+                        {/block:Description}
+                    </li>
+<br />
+<hr />
+<br />
+                {/block:Link}
+
+                {block:Chat}
+                    <li class="post chat">
+                        {block:Title}
+                            <h3><a href="{Permalink}">{Title}</a></h3>
+                        {/block:Title}
+
+                        <ul class="chat">
+                            {block:Lines}
+                                <li class="{Alt} user_{UserNumber}">
+                                    {block:Label}
+                                        <span class="label">{Label}</span>
+                                    {/block:Label}
+
+                                    {Line}
+                                </li>
+                            {/block:Lines}
+                        </ul>
+                    </li>
+<br />
+<hr />
+<br />
+                {/block:Chat}
+
+                {block:Video}
+                    <li class="post video">
+                        {Video-500}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+                        {/block:Caption}
+                    </li>
+<br />
+<hr />
+<br />
+                {/block:Video}
+
+                {block:Audio}
+                    <li class="post audio">
+                        {AudioPlayerBlack}
+
+                        {block:Caption}
+                            <div class="caption">{Caption}</div>
+<br />
+<hr />
+<br />
+                        {/block:Caption}
+                    </li>
+                {/block:Audio}
+            {/block:Posts}
+        </ol>
+        
+</body>
+
+</html>
