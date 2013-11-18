@@ -70,6 +70,11 @@ ol, ul, li {
     list-style: none;
 }
 
+div.extras {
+    float: right;
+    margin: auto;
+}
+
 {CustomCSS}
 
 </style>
