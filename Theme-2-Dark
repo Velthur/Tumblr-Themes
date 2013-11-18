@@ -41,7 +41,7 @@ div.sidebar {
     background: url('http://static.tumblr.com/ycb8sp7/FJ2mvpwnb/content-bg-white.jpg');
     margin: auto;
     height: 500px;
-    width: 250px;
+    width: 250%;
     float:left;
     position:float;
     border-radius: 5px;
@@ -51,7 +51,7 @@ div.sidebar {
 div.content {
     background: url('http://static.tumblr.com/ycb8sp7/FJ2mvpwnb/content-bg-white.jpg');
     border-radius: 5px;
-    width: 1000px;
+    width: 1000%;
     float: right;
     padding: 10px 
 }
