@@ -1,0 +1,28 @@
+<!-- Theme made by Corey Chambers | velthur.tumblr.com -->
+
+<!DOCTYPE html>
+
+<head>
+
+<title>{block:IfTextBlogTitle}{text:Title}{/block:IfTextBlogTitle}{block:IfNotTextBlogTitle}{Title}{/block:IfNotTextBlogTitle}</title>
+
+<meta name="text:Blog Title" content="{Title}'s Blog" />
+<meta name="color:Background Colour" content="#F8F8FF" />
+<meta name="color:Link Colour" content="" />
+<meta name="if:Display Twitter Link" content="0" />
+<meta name="text:TwitterTagline" content="Everyday I'm tumblin'" />
+<meta name="color:Post Background Colour" content="" />
+
+<!-- Styling -->
+
+<style>
+
+.headercontainer {
+  border: 1px solid gray;
+  border-radius: 5px;
+  background-color: {color:Post Background Colour};
+  margin-top: 0px;
+  margin-left: auto;
+  margin-right: auto;
+  font-family:
+}
